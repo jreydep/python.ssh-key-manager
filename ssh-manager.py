@@ -114,7 +114,6 @@ class authorize:
             return self.rsa_restore()
 # - --  ---   ------------------------------------------------------------
 
-
 """ Command line parser
 """
 if __name__ == "__main__":

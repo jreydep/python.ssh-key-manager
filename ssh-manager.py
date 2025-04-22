@@ -4,6 +4,11 @@
 """
   SSH rsa keys
 
+  RCS-ID:      $Id: ssh-manager.py, v0.1 20.08.2019 18:29 Worked Exp $
+  Author:      Worked <operador@gmail.com>
+  Created:     20.08.2019 v0.1 ssh-manager.py
+  License:     GNU General Public License v3.0 
+
   That Python file is free software; you can redistribute it and/or modify it
   under the terms of the GNU General Public License as published by the Free
   Software Foundation; either version 2 of the License, or (at your option)
@@ -19,14 +24,10 @@
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 """
 
-
-
 import argcomplete
 import argparse
 from os import listdir, system
 from os.path import isfile, join
-
-
 
 def get_rsa_enabled(prefix, parsed_args, **kwargs):
     """
@@ -118,13 +119,13 @@ class authorize:
 """
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-                                prog='ssh-manager',
-                                description='''Restauracion de ssh-rsa keys en /root/.ssh/authorized_keys.\
-                                               Actualmente este script cuenta con autocompletado que mostrara\
-                                               las keys disponibles (--install) y las instaladas (--remove)\
-                                               al tabular una vez escrita la orden, siendo de esta forma mas\
-                                               intuitivo de cara al usuario.''',
-                                epilog='always use ssh-manager, make your day over ssh more simple.')
+            prog='ssh-manager',
+            description='''Restauracion de ssh-rsa keys en /root/.ssh/authorized_keys.\
+                        Actualmente este script cuenta con autocompletado que mostrara\
+                        las keys disponibles (--install) y las instaladas (--remove)\
+                        al tabular una vez escrita la orden, siendo de esta forma mas\
+                        intuitivo de cara al usuario.''',
+            epilog='always use ssh-manager, make your day over ssh more simple.')
 
     # Comandos aceptados
     group = parser.add_mutually_exclusive_group(required=True)
